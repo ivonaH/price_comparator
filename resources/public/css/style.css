@@ -1,7 +1,11 @@
+h2{
+  color:brown;
+}
 h1{
     color:brown;
     font-family: 'Courier New', Courier, monospace;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -26,4 +30,17 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden; 
+  }
+  table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  th, td {
+    padding: 15px;
   }

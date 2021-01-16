@@ -5,7 +5,9 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [compojure "1.6.1"]
                  [ring/ring-defaults "0.3.2"]
-                 [hiccup "1.0.5"]]
+                 [hiccup "1.0.5"]
+                 [org.clojure/java.jdbc "0.7.11"]
+                 [org.xerial/sqlite-jdbc "3.23.1"]]
   :plugins [[lein-ring "0.12.5"]]
   :ring {:handler example1.handler/app}
   :profiles
