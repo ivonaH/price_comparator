@@ -3,7 +3,6 @@
             [compojure.route :as route]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
             [ring.middleware.session]
-            [ring.util.response :as response]
             [example1.views :as v]))
 
 (defroutes app-routes
