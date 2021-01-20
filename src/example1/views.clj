@@ -2,7 +2,6 @@
   (:require [hiccup.page :refer [html5 include-css]]
             [example1.db :as db]))
 
-
 (def head
   (list
    [:head
@@ -18,7 +17,7 @@
   (html5
    head
    [:div
-    [:h1 (str "Welcome to the price comparator CAO")]
+    [:h1 (str "Welcome to the price comparator")]
     [:h2 "Find your product"]]))
 
 

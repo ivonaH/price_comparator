@@ -7,7 +7,8 @@
                  [ring/ring-defaults "0.3.2"]
                  [hiccup "1.0.5"]
                  [org.clojure/java.jdbc "0.7.11"]
-                 [org.xerial/sqlite-jdbc "3.23.1"]]
+                 [org.xerial/sqlite-jdbc "3.23.1"]
+                 [reaver "0.1.3"]]
   :plugins [[lein-ring "0.12.5"]]
   :ring {:handler example1.handler/app}
   :profiles
