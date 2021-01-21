@@ -4,17 +4,17 @@
 
 (defn return-weight-with-unit
   "function that returns weight and unit from the name of the product or nil"
-  [product]
-  (let [name (lower-case product)]
-    (or (re-find #"[0-9]+ ?k?gr?" name) (re-find #"[0-9]+ ?kom(?:ada)?" name) (re-find #"[0-9]+ ?ka?ps?(?:ula)?" name) (re-find #"[0-9]+ ?m?l" name)
-        (re-find #"[0-9]+ ?tableta" name) (re-find #"[0-9]+ ?tb" name) (re-find #"[0-9]+ ?cps" name))))
+  [name]
+    (or (re-find #"[0-9]+ ?(?i)k?gr?" name) (re-find #"[0-9]+ ?(?i)kom(?:ada)?" name) (re-find #"[0-9]+ ?(?i)ka?ps?(?:ula)?" name) (re-find #"[0-9]+ ?(?i)m?l" name)
+        (re-find #"[0-9]+ ?(?i)tableta" name) (re-find #"[0-9]+ ?(?i)tb" name) (re-find #"[0-9]+ ?(?i)cps" name)))
+
 
 (defn extract-weight
   "extracts weight without unit"
   [product]
-  (if-let [weight (return-weight-with-unit product)]
+  (let [name (:name product)](if-let [weight (return-weight-with-unit name)]
     (Integer/valueOf (re-find #"\d+" weight))
-    100))
+    100)))
 
 
 (defn extract-unit
@@ -41,6 +41,8 @@
 (defn format-price
   "removes currency from price and returns price as number"
   [price]
-  (Double/valueOf (re-find #"\d+" price)))
+  (if-let [price-value (re-find #"\d+" price)]
+  (Double/valueOf price-value)
+          0))
 
 

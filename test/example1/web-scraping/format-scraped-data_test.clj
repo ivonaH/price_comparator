@@ -4,43 +4,43 @@
 
 (deftest test-return-weight-with-unit
   (testing "unit 100komada"
-    (is (= (return-weight-with-unit {:name "apple 100komada"}) "100komada")))
+    (is (= (return-weight-with-unit "apple 100komada") "100komada")))
   (testing "unit 100kom"
-    (is (= (return-weight-with-unit {:name "apple 100kom"}) "100kom")))
+    (is (= (return-weight-with-unit "apple 100kom") "100kom")))
   (testing "unit 100gr"
-    (is (= (return-weight-with-unit {:name "apple 100gr"}) "100gr")))
+    (is (= (return-weight-with-unit "apple 100gr") "100gr")))
   (testing "unit 100kg"
-    (is (= (return-weight-with-unit {:name "apple 100kg"}) "100kg")))
+    (is (= (return-weight-with-unit "apple 100kg") "100kg")))
   (testing "unit 100kapsula"
-    (is (= (return-weight-with-unit {:name "apple 100kapsula"}) "100kapsula")))
+    (is (= (return-weight-with-unit "apple 100kapsula") "100kapsula")))
   (testing "unit 100kaps"
-    (is (= (return-weight-with-unit {:name "apple 100kaps"}) "100kaps")))
+    (is (= (return-weight-with-unit "apple 100kaps") "100kaps")))
   (testing "unit 100kp"
-    (is (= (return-weight-with-unit {:name "apple 100kp"}) "100kp")))
+    (is (= (return-weight-with-unit "apple 100kp") "100kp")))
   (testing "unit 100 kapsula"
-    (is (= (return-weight-with-unit {:name "apple 100 kapsula"}) "100 kapsula")))
+    (is (= (return-weight-with-unit "apple 100 kapsula") "100 kapsula")))
   (testing "unit 100 kaps"
-    (is (= (return-weight-with-unit {:name "apple 100 kaps"}) "100 kaps")))
+    (is (= (return-weight-with-unit "apple 100 kaps") "100 kaps")))
   (testing "unit 100 kp"
-    (is (= (return-weight-with-unit {:name "apple 100 kp"}) "100 kp")))
+    (is (= (return-weight-with-unit "apple 100 kp") "100 kp")))
   (testing "unit 100 ml"
-    (is (= (return-weight-with-unit {:name "apple 100 ml"}) "100 ml")))
+    (is (= (return-weight-with-unit "apple 100 ml") "100 ml")))
   (testing "unit 100ml"
-    (is (= (return-weight-with-unit {:name "apple 100ml"}) "100ml")))
+    (is (= (return-weight-with-unit "apple 100ml") "100ml")))
   (testing "unit 100 l"
-    (is (= (return-weight-with-unit {:name "apple 100 l"}) "100 l")))
+    (is (= (return-weight-with-unit "apple 100 l") "100 l")))
   (testing "unit 100l"
-    (is (= (return-weight-with-unit {:name "apple 100l"}) "100l")))
+    (is (= (return-weight-with-unit "apple 100l") "100l")))
   (testing "unit 100 tableta"
-    (is (= (return-weight-with-unit {:name "apple 100 tableta"}) "100 tableta")))
+    (is (= (return-weight-with-unit "apple 100 tableta") "100 tableta")))
   (testing "unit 100tableta"
-    (is (= (return-weight-with-unit {:name "apple 100tableta"}) "100tableta")))
+    (is (= (return-weight-with-unit "apple 100tableta") "100tableta")))
   (testing "unit 100 tb"
-    (is (= (return-weight-with-unit {:name "apple 100 tb"}) "100 tb")))
+    (is (= (return-weight-with-unit "apple 100 tb") "100 tb")))
   (testing "unit 100tb"
-    (is (= (return-weight-with-unit {:name "apple 100tb"}) "100tb")))
+    (is (= (return-weight-with-unit "apple 100tb") "100tb")))
   (testing "unit 100cps"
-    (is (= (return-weight-with-unit {:name "apple 100cps"}) "100cps"))))
+    (is (= (return-weight-with-unit "apple 100cps") "100cps"))))
 
 (deftest test-extract-unit
   (testing "unit 100komada"
