@@ -8,5 +8,4 @@ pom.xml.asc
 *.class
 /.lein-*
 /.nrepl-port
-database.db
 .calva/output-window/output.calva-repl
