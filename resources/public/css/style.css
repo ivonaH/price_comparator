@@ -21,10 +21,10 @@ ul {
     display: block;
     padding: 8px;
     background-color: #dddddd;
+    text-decoration: none;
+    color: brown;
   }
-  a{
-      color:orchid;
-  }
+ 
   .menu{
     list-style-type: none;
     margin: 0;
@@ -38,9 +38,47 @@ ul {
   
   table {
     border-collapse: collapse;
-    width: 80%;
+    max-width:100%;
+    white-space:nowrap;
   }
   
   th, td {
     padding: 15px;
   }
+  .tester td input{
+    font-style: italic;
+    border: none;
+    color: darkblue;
+    width: 80px;
+  }
+  .min{
+    font-style: bold;
+    color: brown;
+  }
+  input.add{
+    background-color: green;
+    color: black;
+  }
+  .remove{
+    background-color: red;
+    color: black;
+  }
+  .row-data td input{
+    color:black;
+        border: none;   
+        width: 80px;  
+  }
+td {
+    column-width: 1rem;
+  }
+  .add{
+    color: white;
+    background-color: green;
+  }
+ 
+  .row-data td input.name,.tester td input.name{
+    color:black;
+    width: 250px;
+  }
+
+  
