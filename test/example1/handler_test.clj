@@ -16,13 +16,26 @@
     (let [response (app (mock/request :get "/search"))]
       (is (= (:status response) 200))))
 
-  (testing "search products"
+  (testing "search products with name"
     (let [response (app (mock/request :get "/get-submit?name=apple"))]
       (is (= (:status response) 200))))
 
-  (testing "adding product to session products"
-    (let [response (app (mock/request :get "/add-product?id=1&name=apple&weight=1&unit=kg"))]
-      (is (= (:status response) 200))))
+  (testing "adding product to cart with POST"
+    ;id name brend weight unit tester gift o p
+    (is (= (:status (app (-> (mock/request :post "/post-submit")
+                    (mock/json-body {:id 1
+                                     :name "THE ONE"
+                                     :brend "d&g"
+                                     :weight 50.0
+                                     :unit "ml"
+                                     :tester "Yes"
+                                     :gift "No"
+                                     :o 6999.00
+                                     :p 8700.00})))) 200)))
+
+    (testing "search products with name and producer"
+      (let [response (app (mock/request :get "/get-submit?name=apple&producer=pera"))]
+        (is (= (:status response) 200))))
 
   (testing "testing cart"
     (let [response (app (mock/request :get "/cart"))]
