@@ -82,13 +82,13 @@ You will need [Leiningen][] 2.0.0 or above installed.
 
 ## Running
 
-To start a web server for the application navigate to example1 project and run:
+To start a web server for the application navigate to **product_scraping** project and run:
 
     lein ring server
 
 ### Scraping data before running server
 
-Before starting server, if you want to scrape perfume store website, you should execute line 101 in file productsscraping.clj. That function creates db, inserts stores to db, scrapes data from defined stores and saves the products to db. If you want to use existing db, that is data scraped on 01.04.2021 just use existing database - database.db.
+Before starting server, if you want to scrape perfume store website, you should execute last commented line _(before-starting-server)_ in file productsscraping.clj. That function creates db, inserts stores to db, scrapes data from defined stores and saves the products to db. If you want to use existing db, that is data scraped on 01.04.2021 just use existing database - database.db.
 
 ## License
 Eclipse Public License 2.0

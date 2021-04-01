@@ -18,223 +18,32 @@
 clj꞉user꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉user꞉> 
-; Evaluating file: views_test.clj
-; WARNING: replace already refers to: #'clojure.core/replace in namespace: example1.formatscrapeddata, being replaced by: #'clojure.string/replace
-#'example1.views-test/test-store-vectore
-; Running tests for example1.views-test...
-; 12 tests finished, all passing 👍, ns: 1, vars: 4
-clj꞉example1.views-test꞉> 
 ; Running all project tests…
-; FAIL in example1.db-test/test-insert-all (db_test.clj:66):
-; are all added values correctly inserted to table STORE
-; expected:
-{:id 1, :name prodaja parfema}
-; actual:
-({:id 1, :name prodaja parfema, :mindelivery nil, :deliverycost nil, :freedelivery nil})
-; FAIL in example1.db-test/test-insert-all (db_test.clj:67):
-; are all added values correctly inserted to table STORE
-; expected:
-{:id 2, :name online prodaja}
-; actual:
-({:id 2, :name online prodaja, :mindelivery nil, :deliverycost nil, :freedelivery nil})
-; FAIL in example1.db-test/test-insert-all (db_test.clj:68):
-; are all added values correctly inserted to table STORE
-; expected:
-{:id 3, :name parfemi online}
-; actual:
-({:id 3, :name parfemi online, :mindelivery nil, :deliverycost nil, :freedelivery nil})
-; FAIL in example1.db-test/test-insert-all (db_test.clj:66):
-; are all added values correctly inserted to table STORE
-; expected:
-{:id 1, :name prodaja parfema}
-; actual:
-({:id 1, :name prodaja parfema, :mindelivery nil, :deliverycost nil, :freedelivery nil})
-; FAIL in example1.db-test/test-insert-all (db_test.clj:67):
-; are all added values correctly inserted to table STORE
-; expected:
-{:id 2, :name online prodaja}
-; actual:
-({:id 2, :name online prodaja, :mindelivery nil, :deliverycost nil, :freedelivery nil})
-; FAIL in example1.db-test/test-insert-all (db_test.clj:68):
-; are all added values correctly inserted to table STORE
-; expected:
-{:id 3, :name parfemi online}
-; actual:
-({:id 3, :name parfemi online, :mindelivery nil, :deliverycost nil, :freedelivery nil})
-; FAIL in example1.db-test/test-insert-db (db_test.clj:44):
-; checking if right values are inserted to table store
-; expected:
-{:id 1, :name original_parfemi}
-; actual:
-({:id 1, :name original_parfemi, :mindelivery nil, :deliverycost nil, :freedelivery nil})
-; FAIL in example1.db-test/test-insert-db (db_test.clj:44):
-; checking if right values are inserted to table store
-; expected:
-{:id 1, :name original_parfemi}
-; actual:
-({:id 1, :name original_parfemi, :mindelivery nil, :deliverycost nil, :freedelivery nil})
-; ERROR in example1.handler-test/test-app (line 49):
-; Uncaught exception, not in assertion
-; error: java.lang.NumberFormatException: null (Integer.java)
-; expected:
-undefined
-; ERROR in example1.handler-test/test-app (line 49):
-; Uncaught exception, not in assertion
-; error: java.lang.NumberFormatException: null (Integer.java)
-; expected:
-undefined
-; 220 tests finished, problems found. 😭 errors: 2, failures: 8, ns: 4, vars: 30
-clj꞉example1.views-test꞉> 
+; 60 tests finished, all passing 👍, ns: 1, vars: 6
+clj꞉user꞉> 
+; Running all project tests…
+; 60 tests finished, all passing 👍, ns: 1, vars: 6
+clj꞉user꞉> 
+; No test found at cursor
+clj꞉user꞉> 
 ; Evaluating file: db_test.clj
 #'example1.db-test/test-insert-all
 ; Running tests for example1.db-test...
 ; 30 tests finished, all passing 👍, ns: 1, vars: 3
 clj꞉example1.db-test꞉> 
-; Evaluating file: handler_test.clj
-#'example1.handler-test/test-app
-; Running test: test-app…
-; ERROR in example1.handler-test/test-app (line 49):
-; Uncaught exception, not in assertion
-; error: java.lang.NumberFormatException: null (Integer.java)
-; expected:
-undefined
-; 9 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 1
-clj꞉example1.handler-test꞉> 
-; Evaluating file: handler_test.clj
-#'example1.handler-test/test-app
-; Running tests for example1.handler-test...
-; ERROR in example1.handler-test/test-app (line 49):
-; Uncaught exception, not in assertion
-; error: java.lang.NumberFormatException: null (Integer.java)
-; expected:
-undefined
-; 9 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 1
-clj꞉example1.handler-test꞉> 
+; Evaluating file: formatscrapeddata_test.clj
+; WARNING: replace already refers to: #'clojure.core/replace in namespace: example1.formatscrapeddata, being replaced by: #'clojure.string/replace
+#'example1.formatscrapeddata-test/test-format-price
+; Running tests for example1.formatscrapeddata-test...
+; 59 tests finished, all passing 👍, ns: 1, vars: 7
+clj꞉example1.formatscrapeddata-test꞉> 
 ; Evaluating file: handler_test.clj
 #'example1.handler-test/test-app
 ; Running tests for example1.handler-test...
 ; 8 tests finished, all passing 👍, ns: 1, vars: 1
 clj꞉example1.handler-test꞉> 
-; Running all project tests…
-; 218 tests finished, all passing 👍, ns: 4, vars: 30
-clj꞉example1.handler-test꞉> 
-0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-SCRAPINGoriginal parfemiFINISHED
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-SCRAPINGparfemi onlineFINISHED
-[{:last_insert_rowid() 1}
- {:last_insert_rowid() 2}
- {:last_insert_rowid() 3}
- {:last_insert_rowid() 4}
- {:last_insert_rowid() 5}
- {:last_insert_rowid() 6}
- {:last_insert_rowid() 7}
- {:last_insert_rowid() 8}
- {:last_insert_rowid() 9}
- {:last_insert_rowid() 10}
- {:last_insert_rowid() 11}
- {:last_insert_rowid() 12}
- {:last_insert_rowid() 13}
- {:last_insert_rowid() 14}
- {:last_insert_rowid() 15}
- {:last_insert_rowid() 16}
- {:last_insert_rowid() 17}
- {:last_insert_rowid() 18}
- {:last_insert_rowid() 19}
- {:last_insert_rowid() 20}
- {:last_insert_rowid() 21}
- {:last_insert_rowid() 22}
- {:last_insert_rowid() 23}
- {:last_insert_rowid() 24}
- {:last_insert_rowid() 25}
- {:last_insert_rowid() 26}
- {:last_insert_rowid() 27}
- {:last_insert_rowid() 28}
- {:last_insert_rowid() 29}
- {:last_insert_rowid() 30}
- {:last_insert_rowid() 31}
- {:last_insert_rowid() 32}
- {:last_insert_rowid() 33}
- {:last_insert_rowid() 34}
- {:last_insert_rowid() 35}
- {:last_insert_rowid() 36}
- {:last_insert_rowid() 37}
- {:last_insert_rowid() 38}
- {:last_insert_rowid() 39}
- {:last_insert_rowid() 40}
- {:last_insert_rowid() 41}
- {:last_insert_rowid() 42}
- {:last_insert_rowid() 43}
- {:last_insert_rowid() 44}
- {:last_insert_rowid() 45}
- {:last_insert_rowid() 46}
- {:last_insert_rowid() 47}
- {:last_insert_rowid() 48}
- {:last_insert_rowid() 49}
- {:last_insert_rowid() 50}
- ...]
-clj꞉example1.productsscraping꞉> 
-; Running all project tests…
-; 218 tests finished, all passing 👍, ns: 4, vars: 30
-clj꞉example1.productsscraping꞉> 
+; Evaluating file: views_test.clj
+#'example1.views-test/test-store-vectore
+; Running tests for example1.views-test...
+; 12 tests finished, all passing 👍, ns: 1, vars: 4
+clj꞉example1.views-test꞉> 
