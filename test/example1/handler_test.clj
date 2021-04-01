@@ -23,19 +23,19 @@
   (testing "adding product to cart with POST"
     ;id name brend weight unit tester gift o p
     (is (= (:status (app (-> (mock/request :post "/post-submit")
-                    (mock/json-body {:id 1
-                                     :name "THE ONE"
-                                     :brend "d&g"
-                                     :weight 50.0
-                                     :unit "ml"
-                                     :tester "Yes"
-                                     :gift "No"
-                                     :o 6999.00
-                                     :p 8700.00})))) 200)))
+                             (mock/json-body {:id 1
+                                              :name "THE ONE"
+                                              :brend "d&g"
+                                              :weight 50.0
+                                              :unit "ml"
+                                              :tester "Yes"
+                                              :gift "No"
+                                              :o 6999.00
+                                              :p 8700.00})))) 200)))
 
-    (testing "search products with name and producer"
-      (let [response (app (mock/request :get "/get-submit?name=apple&producer=pera"))]
-        (is (= (:status response) 200))))
+  (testing "search products with name and producer"
+    (let [response (app (mock/request :get "/get-submit?name=apple&producer=pera"))]
+      (is (= (:status response) 200))))
 
   (testing "testing cart"
     (let [response (app (mock/request :get "/cart"))]
@@ -43,11 +43,4 @@
 
   (testing "testing removing product from cart"
     (let [response (app (mock/request :get "/remove-product?id=1"))]
-      (is (= (:status response) 200))))
-
-  (testing "testing reducing product quantity from cart"
-    (let [response (app (mock/request :get "/reduce-product?id=1&quantity=5"))]
-      (is (= (:status response) 200))
-      (str "BODY" (:body response))
-     (is (boolean (re-find #"<h2>Product quantity is reduced.</h2>" (:body response)))
-))))
+      (is (= (:status response) 200)))))

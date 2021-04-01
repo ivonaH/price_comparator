@@ -20,10 +20,7 @@
                                            [:tester :text]])
                         (create-table-ddl :store
                                           [[:id :integer "PRIMARY KEY AUTOINCREMENT"]
-                                           [:name :text]
-                                           [:mindelivery :double]
-                                           [:deliverycost :double]
-                                           [:freedelivery :double]])
+                                           [:name :text]])
                         (create-table-ddl :storeprice
                                           [[:id :integer "PRIMARY KEY AUTOINCREMENT"]
                                            [:store_id :integer]
@@ -51,11 +48,11 @@
 (defn results
   "execute query and return lazy sequence"
   ([db word]
-  (query db [(str "select product.*, s.name as store_name, storeprice.price as price, storeprice.gift as gift from product join storeprice on product.id=storeprice.product_id join store s on s.id=storeprice.store_id where product.name like '" word
+  (query db [(str "select product.*, s.name as store_name, storeprice.price as price, storeprice.gift as gift from product join storeprice on product.id=storeprice.product_id join store s on s.id=storeprice.store_id where product.name like '%" word
                   "%'")]))
   ([db word brend]
-  (query db [(str "select product.*, s.name as store_name, storeprice.price as price, storeprice.gift as gift from product join storeprice on product.id=storeprice.product_id join store s on s.id=storeprice.store_id where product.name like '" word
-                  "%' and product.brend like '" brend "%'")])))
+  (query db [(str "select product.*, s.name as store_name, storeprice.price as price, storeprice.gift as gift from product join storeprice on product.id=storeprice.product_id join store s on s.id=storeprice.store_id where product.name like '%" word
+                  "%' and product.brend like '%" brend "%'")])))
 
 (defn drop-all-tables
   "drops all the tables in db"

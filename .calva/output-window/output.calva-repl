@@ -5,7 +5,7 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
-; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.8.3"] -- update-in :plugins conj [cider/cider-nrepl,"0.25.6"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev repl :headless
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.8.3"] -- update-in :plugins conj [cider/cider-nrepl,"0.25.8"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev repl :headless
 ; Hooking up nREPL sessions...
 ; Connected session: clj
 ; TIPS: 
@@ -15,290 +15,226 @@
 ;   - `alt+up` and `alt+down` traverse up and down the REPL command history
 ;      when the cursor is after the last contents at the prompt
 ;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉user꞉> 
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉user꞉> 
-#'example1.db/insert-all
-clj꞉example1.db꞉> 
-#'example1.web-scraping.format-scraped-data/format-price
-; WARNING: replace already refers to: #'clojure.core/replace in namespace: example1.web-scraping.format-scraped-data, being replaced by: #'clojure.string/replace
-clj꞉example1.web-scraping.format-scraped-data꞉> 
-#'example1.webscraping.products-scraping/get-all-pages
-clj꞉example1.webscraping.products-scraping꞉> 
-#'example1.webscraping.products-scraping/stores
-clj꞉example1.webscraping.products-scraping꞉> 
-NEXT:  ?page=2&per_page=1&sort=4&card_view=&c[]=52&price_range=
-NEXT:  ?page=3&per_page=1&sort=4&card_view=&c[]=52&price_range=
-NEXT:  ?page=4&per_page=1&sort=4&card_view=&c[]=52&price_range=
-NEXT:  ?page=5&per_page=1&sort=4&card_view=&c[]=52&price_range=
-NEXT:  ?page=6&per_page=1&sort=4&card_view=&c[]=52&price_range=
-NEXT:  nil
-[{:name "Sante dental med pasta za zube izmirna 75ml", :price "635.00 rsd"}
- {:name "SYNERGETIC bio vitaminska pasta za zube delikatno izbeljivanje malina menta 100g", :price "390.00 rsd"}
- {:name "SYNERGETIC bio vitaminska pasta za zube kompleks formula 7u1 100g", :price "390.00 rsd"}
- {:name "SYNERGETIC bio vitaminska pasta za zube intezivno izbeljivanje 100g", :price "390.00 rsd"}
- {:name "SYNERGETIC bio vitaminska pasta za zube aktivna zaštita 100g", :price "390.00 rsd"}
- {:name "SYNERGETIC bio vitaminska pasta za osetljive zube i desni 100g", :price "390.00 rsd"}
- {:name "Splat Zubna pasta ultracomplex 100ml", :price "399.00 rsd"}
- {:name "Dr. Hauschka tečnost za ispiranje usta od žalfije 300ml", :price "1355.00 rsd"}
- {:name "Logona pasta za zube ruzmarin&žalfija-bez mentola 75 ml", :price "478.40 rsd"}
- {:name "Ayurdent zubna pasta classic 75ml", :price "570.00 rsd"}
- {:name "Ayurdent zubna pasta mild-blaga 75ml", :price "570.00 rsd"}
- {:name "Logona Extra fresh pepermint pasta za zube 75ml", :price "483.00 rsd"}
- {:name "Logodent natural white pasta za zube 75ml", :price "698.00 rsd"}
- {:name "Shenemil Pasta za zube 75ml", :price "385.00 rsd"}
- {:name "SPLAT Medical herbs pasta za zube 100 ml", :price "399.00 rsd"}
- {:name "Zdrava pasta MENTA 85g", :price "300.00 rsd"}
- {:name "Freška Gora zubna pasta nana 80g", :price "378.00 rsd"}
- {:name "Freška Gora zubna pasta narandža 80g", :price "378.00 rsd"}
- {:name "Freška Gora zubna pasta cimet 80g", :price "378.00 rsd"}
- {:name "Maxlab Srebrosept pasta za zube 75ml", :price "440.00 rsd"}
- {:name "Logona Pasta za zube Fresh kids menta 50ml", :price "498.00 rsd"}
- {:name "SPLAT White plus Pasta za zube 100ml", :price "399.00 rsd"}
- {:name "Weleda Pasta za zube Neven 75ml", :price "780.00 rsd"}
- {:name "Weleda Pasta za zube Ratanija 75ml", :price "780.00 rsd"}
- {:name "Weleda Pasta za zube Slana 75ml", :price "780.00 rsd"}
- {:name "Weleda Biljna pasta za zube 75ml", :price "780.00 rsd"}
- {:name "Šumski balzam Tečnost za ispiranje usta sa žalfijom i uljem kedrovog oraha 250ml", :price "569.00 rsd"}
- {:name "Šumski balzam Medicinska zubna pasta protiv upale desni 75 ml", :price "359.00 rsd"}
- {:name "Dr.Hauschka Med pasta za zube sa slanom vodom sensitive 75ml", :price "705.00 rsd"}
- {:name "Dr.Hauschka Med pasta za zube sa nanom 75ml", :price "705.00 rsd"}
- {:name "Shenemil Ulje Dental 100ml", :price "415.00 rsd"}
- {:name "Shenemil Osveživač daha 25ml sprej", :price "230.00 rsd"}
- {:name "Logona Pasta za zube Sensitiv 75ml", :price "698.00 rsd"}
- {:name "Logona Pasta za Zube Happy kids jagoda 50ml", :price "498.00 rsd"}
- {:name "Šumski balzam zubna pasta sa ugljem i mentom 75ml", :price "385.00 rsd"}
- {:name "Splat Zubna pasta ultracomplex 40ml", :price "200.00 rsd"}
- {:name "Promo set Weleda Dečiji gel za zube 50ml+ četkica za zube od bambusa", :price "615.00 rsd"}
- {:name "Splat BIOMED CHARCOAL 100g", :price "400.00 rsd"}
- {:name "ALTEREKO kutija za četkice od bambusa", :price "835.00 rsd"}
- {:name "ALTEREKO četkica za zube od bambusa za odrasle", :price "455.00 rsd"}
- {:name "ALTEREKO četkica za zube od bambusa za decu", :price "455.00 rsd"}
- {:name "SPLAT Zubna četkica complete", :price "399.00 rsd"}
- {:name "SPLAT Putni set biocalcium pasta za zube 40ml i zubna četkica", :price "349.00 rsd"}
- {:name "SPLAT Zubna pasta medical herbs travel 40ml", :price "215.00 rsd"}
- {:name "SPLAT BIOMED propoline pasta za zube 100g", :price "299.00 rsd"}
- {:name "SPLAT BIOMED calcimax pasta za zube 100g", :price "400.00 rsd"}
- {:name "SPLAT BIOMED Superwhite Pasta za zube 100g", :price "299.00 rsd"}
- {:name "SPLAT BIOMED Biocomplex Pasta za zube 100g", :price "299.00 rsd"}
- {:name "SPLAT BIOMED Pasta za zube 100g", :price "299.00 rsd"}
- {:name "SPLAT Sea minerals pasta za zube 75 ml", :price "539.00 rsd"}
+; Evaluating file: views_test.clj
+; WARNING: replace already refers to: #'clojure.core/replace in namespace: example1.formatscrapeddata, being replaced by: #'clojure.string/replace
+#'example1.views-test/test-store-vectore
+; Running tests for example1.views-test...
+; 12 tests finished, all passing 👍, ns: 1, vars: 4
+clj꞉example1.views-test꞉> 
+; Running all project tests…
+; FAIL in example1.db-test/test-insert-all (db_test.clj:66):
+; are all added values correctly inserted to table STORE
+; expected:
+{:id 1, :name prodaja parfema}
+; actual:
+({:id 1, :name prodaja parfema, :mindelivery nil, :deliverycost nil, :freedelivery nil})
+; FAIL in example1.db-test/test-insert-all (db_test.clj:67):
+; are all added values correctly inserted to table STORE
+; expected:
+{:id 2, :name online prodaja}
+; actual:
+({:id 2, :name online prodaja, :mindelivery nil, :deliverycost nil, :freedelivery nil})
+; FAIL in example1.db-test/test-insert-all (db_test.clj:68):
+; are all added values correctly inserted to table STORE
+; expected:
+{:id 3, :name parfemi online}
+; actual:
+({:id 3, :name parfemi online, :mindelivery nil, :deliverycost nil, :freedelivery nil})
+; FAIL in example1.db-test/test-insert-all (db_test.clj:66):
+; are all added values correctly inserted to table STORE
+; expected:
+{:id 1, :name prodaja parfema}
+; actual:
+({:id 1, :name prodaja parfema, :mindelivery nil, :deliverycost nil, :freedelivery nil})
+; FAIL in example1.db-test/test-insert-all (db_test.clj:67):
+; are all added values correctly inserted to table STORE
+; expected:
+{:id 2, :name online prodaja}
+; actual:
+({:id 2, :name online prodaja, :mindelivery nil, :deliverycost nil, :freedelivery nil})
+; FAIL in example1.db-test/test-insert-all (db_test.clj:68):
+; are all added values correctly inserted to table STORE
+; expected:
+{:id 3, :name parfemi online}
+; actual:
+({:id 3, :name parfemi online, :mindelivery nil, :deliverycost nil, :freedelivery nil})
+; FAIL in example1.db-test/test-insert-db (db_test.clj:44):
+; checking if right values are inserted to table store
+; expected:
+{:id 1, :name original_parfemi}
+; actual:
+({:id 1, :name original_parfemi, :mindelivery nil, :deliverycost nil, :freedelivery nil})
+; FAIL in example1.db-test/test-insert-db (db_test.clj:44):
+; checking if right values are inserted to table store
+; expected:
+{:id 1, :name original_parfemi}
+; actual:
+({:id 1, :name original_parfemi, :mindelivery nil, :deliverycost nil, :freedelivery nil})
+; ERROR in example1.handler-test/test-app (line 49):
+; Uncaught exception, not in assertion
+; error: java.lang.NumberFormatException: null (Integer.java)
+; expected:
+undefined
+; ERROR in example1.handler-test/test-app (line 49):
+; Uncaught exception, not in assertion
+; error: java.lang.NumberFormatException: null (Integer.java)
+; expected:
+undefined
+; 220 tests finished, problems found. 😭 errors: 2, failures: 8, ns: 4, vars: 30
+clj꞉example1.views-test꞉> 
+; Evaluating file: db_test.clj
+#'example1.db-test/test-insert-all
+; Running tests for example1.db-test...
+; 30 tests finished, all passing 👍, ns: 1, vars: 3
+clj꞉example1.db-test꞉> 
+; Evaluating file: handler_test.clj
+#'example1.handler-test/test-app
+; Running test: test-app…
+; ERROR in example1.handler-test/test-app (line 49):
+; Uncaught exception, not in assertion
+; error: java.lang.NumberFormatException: null (Integer.java)
+; expected:
+undefined
+; 9 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 1
+clj꞉example1.handler-test꞉> 
+; Evaluating file: handler_test.clj
+#'example1.handler-test/test-app
+; Running tests for example1.handler-test...
+; ERROR in example1.handler-test/test-app (line 49):
+; Uncaught exception, not in assertion
+; error: java.lang.NumberFormatException: null (Integer.java)
+; expected:
+undefined
+; 9 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 1
+clj꞉example1.handler-test꞉> 
+; Evaluating file: handler_test.clj
+#'example1.handler-test/test-app
+; Running tests for example1.handler-test...
+; 8 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉example1.handler-test꞉> 
+; Running all project tests…
+; 218 tests finished, all passing 👍, ns: 4, vars: 30
+clj꞉example1.handler-test꞉> 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+SCRAPINGoriginal parfemiFINISHED
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+SCRAPINGparfemi onlineFINISHED
+[{:last_insert_rowid() 1}
+ {:last_insert_rowid() 2}
+ {:last_insert_rowid() 3}
+ {:last_insert_rowid() 4}
+ {:last_insert_rowid() 5}
+ {:last_insert_rowid() 6}
+ {:last_insert_rowid() 7}
+ {:last_insert_rowid() 8}
+ {:last_insert_rowid() 9}
+ {:last_insert_rowid() 10}
+ {:last_insert_rowid() 11}
+ {:last_insert_rowid() 12}
+ {:last_insert_rowid() 13}
+ {:last_insert_rowid() 14}
+ {:last_insert_rowid() 15}
+ {:last_insert_rowid() 16}
+ {:last_insert_rowid() 17}
+ {:last_insert_rowid() 18}
+ {:last_insert_rowid() 19}
+ {:last_insert_rowid() 20}
+ {:last_insert_rowid() 21}
+ {:last_insert_rowid() 22}
+ {:last_insert_rowid() 23}
+ {:last_insert_rowid() 24}
+ {:last_insert_rowid() 25}
+ {:last_insert_rowid() 26}
+ {:last_insert_rowid() 27}
+ {:last_insert_rowid() 28}
+ {:last_insert_rowid() 29}
+ {:last_insert_rowid() 30}
+ {:last_insert_rowid() 31}
+ {:last_insert_rowid() 32}
+ {:last_insert_rowid() 33}
+ {:last_insert_rowid() 34}
+ {:last_insert_rowid() 35}
+ {:last_insert_rowid() 36}
+ {:last_insert_rowid() 37}
+ {:last_insert_rowid() 38}
+ {:last_insert_rowid() 39}
+ {:last_insert_rowid() 40}
+ {:last_insert_rowid() 41}
+ {:last_insert_rowid() 42}
+ {:last_insert_rowid() 43}
+ {:last_insert_rowid() 44}
+ {:last_insert_rowid() 45}
+ {:last_insert_rowid() 46}
+ {:last_insert_rowid() 47}
+ {:last_insert_rowid() 48}
+ {:last_insert_rowid() 49}
+ {:last_insert_rowid() 50}
  ...]
-clj꞉example1.webscraping.products-scraping꞉> 
-#'example1.webscraping.products-scraping/get-all-pages
-clj꞉example1.webscraping.products-scraping꞉> 
-#'example1.webscraping.products-scraping/stores
-clj꞉example1.webscraping.products-scraping꞉> 
-NEXT:  ?page=2&per_page=1&sort=4&card_view=&c[]=52&price_range=
-NEXT:  ?page=3&per_page=1&sort=4&card_view=&c[]=52&price_range=
-NEXT:  ?page=4&per_page=1&sort=4&card_view=&c[]=52&price_range=
-NEXT:  ?page=5&per_page=1&sort=4&card_view=&c[]=52&price_range=
-NEXT:  ?page=6&per_page=1&sort=4&card_view=&c[]=52&price_range=
-NEXT:  nil
-[{:name "Sante dental med pasta za zube izmirna 75ml", :price "635.00 rsd"}
- {:name "SYNERGETIC bio vitaminska pasta za zube delikatno izbeljivanje malina menta 100g", :price "390.00 rsd"}
- {:name "SYNERGETIC bio vitaminska pasta za zube kompleks formula 7u1 100g", :price "390.00 rsd"}
- {:name "SYNERGETIC bio vitaminska pasta za zube intezivno izbeljivanje 100g", :price "390.00 rsd"}
- {:name "SYNERGETIC bio vitaminska pasta za zube aktivna zaštita 100g", :price "390.00 rsd"}
- {:name "SYNERGETIC bio vitaminska pasta za osetljive zube i desni 100g", :price "390.00 rsd"}
- {:name "Splat Zubna pasta ultracomplex 100ml", :price "399.00 rsd"}
- {:name "Dr. Hauschka tečnost za ispiranje usta od žalfije 300ml", :price "1355.00 rsd"}
- {:name "Logona pasta za zube ruzmarin&žalfija-bez mentola 75 ml", :price "478.40 rsd"}
- {:name "Ayurdent zubna pasta classic 75ml", :price "570.00 rsd"}
- {:name "Ayurdent zubna pasta mild-blaga 75ml", :price "570.00 rsd"}
- {:name "Logona Extra fresh pepermint pasta za zube 75ml", :price "483.00 rsd"}
- {:name "Logodent natural white pasta za zube 75ml", :price "698.00 rsd"}
- {:name "Shenemil Pasta za zube 75ml", :price "385.00 rsd"}
- {:name "SPLAT Medical herbs pasta za zube 100 ml", :price "399.00 rsd"}
- {:name "Zdrava pasta MENTA 85g", :price "300.00 rsd"}
- {:name "Freška Gora zubna pasta nana 80g", :price "378.00 rsd"}
- {:name "Freška Gora zubna pasta narandža 80g", :price "378.00 rsd"}
- {:name "Freška Gora zubna pasta cimet 80g", :price "378.00 rsd"}
- {:name "Maxlab Srebrosept pasta za zube 75ml", :price "440.00 rsd"}
- {:name "Logona Pasta za zube Fresh kids menta 50ml", :price "498.00 rsd"}
- {:name "SPLAT White plus Pasta za zube 100ml", :price "399.00 rsd"}
- {:name "Weleda Pasta za zube Neven 75ml", :price "780.00 rsd"}
- {:name "Weleda Pasta za zube Ratanija 75ml", :price "780.00 rsd"}
- {:name "Weleda Pasta za zube Slana 75ml", :price "780.00 rsd"}
- {:name "Weleda Biljna pasta za zube 75ml", :price "780.00 rsd"}
- {:name "Šumski balzam Tečnost za ispiranje usta sa žalfijom i uljem kedrovog oraha 250ml", :price "569.00 rsd"}
- {:name "Šumski balzam Medicinska zubna pasta protiv upale desni 75 ml", :price "359.00 rsd"}
- {:name "Dr.Hauschka Med pasta za zube sa slanom vodom sensitive 75ml", :price "705.00 rsd"}
- {:name "Dr.Hauschka Med pasta za zube sa nanom 75ml", :price "705.00 rsd"}
- {:name "Shenemil Ulje Dental 100ml", :price "415.00 rsd"}
- {:name "Shenemil Osveživač daha 25ml sprej", :price "230.00 rsd"}
- {:name "Logona Pasta za zube Sensitiv 75ml", :price "698.00 rsd"}
- {:name "Logona Pasta za Zube Happy kids jagoda 50ml", :price "498.00 rsd"}
- {:name "Šumski balzam zubna pasta sa ugljem i mentom 75ml", :price "385.00 rsd"}
- {:name "Splat Zubna pasta ultracomplex 40ml", :price "200.00 rsd"}
- {:name "Promo set Weleda Dečiji gel za zube 50ml+ četkica za zube od bambusa", :price "615.00 rsd"}
- {:name "Splat BIOMED CHARCOAL 100g", :price "400.00 rsd"}
- {:name "ALTEREKO kutija za četkice od bambusa", :price "835.00 rsd"}
- {:name "ALTEREKO četkica za zube od bambusa za odrasle", :price "455.00 rsd"}
- {:name "ALTEREKO četkica za zube od bambusa za decu", :price "455.00 rsd"}
- {:name "SPLAT Zubna četkica complete", :price "399.00 rsd"}
- {:name "SPLAT Putni set biocalcium pasta za zube 40ml i zubna četkica", :price "349.00 rsd"}
- {:name "SPLAT Zubna pasta medical herbs travel 40ml", :price "215.00 rsd"}
- {:name "SPLAT BIOMED propoline pasta za zube 100g", :price "299.00 rsd"}
- {:name "SPLAT BIOMED calcimax pasta za zube 100g", :price "400.00 rsd"}
- {:name "SPLAT BIOMED Superwhite Pasta za zube 100g", :price "299.00 rsd"}
- {:name "SPLAT BIOMED Biocomplex Pasta za zube 100g", :price "299.00 rsd"}
- {:name "SPLAT BIOMED Pasta za zube 100g", :price "299.00 rsd"}
- {:name "SPLAT Sea minerals pasta za zube 75 ml", :price "539.00 rsd"}
- ...]
-clj꞉example1.webscraping.products-scraping꞉> 
-NEXT:  ?page=2
-NEXT:  nil
-[{:name "Prirodni melem za regeneraciju 200ml Hedera Vita", :price "603,00 RSD"}
- {:name "Hamamelis gel 100ml", :price "315,00 RSD"}
- {:name "Srebrna voda u spreju 100ml", :price "350,00 RSD"}
- {:name "Srebrna voda 200ml Maxlab", :price "285,00 RSD"}
- {:name "Srebrna voda 500ml", :price "580,00 RSD"}
- {:name "Gel za vene 250ml Hedera Vita", :price "605,00 RSD"}
- {:name "Nim (neem) prah 150g", :price "1.340,00 RSD"}
- {:name "Manuka med UMF 5 250g", :price "2.810,00 RSD"}
- {:name "Manuka med UMF 15+ 250g", :price "5.887,00 RSD"}
- {:name "Manuka med UMF 10+ 250g", :price "4.282,00 RSD"}
- {:name "Venokorset gel 50ml", :price "812,00 RSD"}
- {:name "Gel za ublažavanje bola (efekat grejanja) 250ml", :price "360,00 RSD"}
- {:name "Kamilica mast 50ml", :price "462,00 RSD"}
- {:name "Venvital, 100ml, Freshka gora", :price "520,00 RSD"}
- {:name "Rederma 50ml", :price "2.125,00 RSD"}
- {:name "Mumie melem 50ml", :price "675,00 RSD"}
- {:name "Moj melem za noge 50ml", :price "670,00 RSD"}
- {:name "Moj melem za kožu 30ml", :price "540,00 RSD"}
- {:name "Brđanski melem protiv virusnih bradavica", :price "1.235,00 RSD"}
- {:name "Mast od gaveza – Ekolife", :price "605,00 RSD"}
- {:name "Melem za vene – Ekolife", :price "605,00 RSD"}
- {:name "Melop G 60g", :price "795,00 RSD"}
- {:name "Melop G 35g", :price "621,00 RSD"}
- {:name "Pronasol melem za sunčanje za decu SPF 40 – Šaljić", :price "1.015,00 RSD"}
- {:name "Staroplaninski melem za kurje oči i bradavice", :price "920,00 RSD"}
- {:name "Staroplaninski melem za ekcem i psorijazu", :price "1.280,00 RSD"}
- {:name "Staroplaninski melem za hemoroide", :price "930,00 RSD"}
- {:name "Mast za hemoroide 40 g", :price "205,00 RSD"}
- {:name "Mast od gaveza 80 ml", :price "277,00 RSD"}
- {:name "Propolis melem", :price "330,00 RSD"}
- {:name "Melop E – Šaljić 150 ml", :price "1.015,00 RSD"}
- {:name "Brđanski melem protiv proširenih vena", :price "1.240,00 RSD"}
- {:name "Brđanski melem protiv hemoroida", :price "1.020,00 RSD"}
- {:name "Brđanski melem protiv bubuljica i akni", :price "1.191,00 RSD"}
- {:name "Brđanski melem za reumu", :price "1.195,00 RSD"}
- {:name "Devi melem za regeneraciju kože", :price "1.350,00 RSD"}
- {:name "Devi melem za strije", :price "900,00 RSD"}
- {:name "Devi melem za pete", :price "750,00 RSD"}
- {:name "Narodni melem za opekotine", :price "357,00 RSD"}
- {:name "Propolis mast 15 ml Biomedika", :price "318,00 RSD"}]
-clj꞉example1.webscraping.products-scraping꞉> 
-(https://shop.bio-una.com/kategorija/zitarice/ https://shop.bio-una.com/kategorija/zdravi-napici/ https://shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/ https://shop.bio-una.com/kategorija/vegeterijanski-program/ https://shop.bio-una.com/kategorija/ulje-sirce-soja-sos/ https://shop.bio-una.com/kategorija/zamena-za-secer-i-zasladjivace/ https://shop.bio-una.com/kategorija/rinfuzna-roba/ https://shop.bio-una.com/kategorija/program-za-kolace/ https://shop.bio-una.com/kategorija/prirodni-sokovi/ https://shop.bio-una.com/kategorija/prirodna-kozmetika/ https://shop.bio-una.com/kategorija/pomocna-lekovita-sredstva/ https://shop.bio-una.com/kategorija/ostali-proizvodi/ https://shop.bio-una.com/kategorija/osnovne-namirnice/ https://shop.bio-una.com/kategorija/orasasto-kandirano-voce/ https://shop.bio-una.com/kategorija/musli-i-pahuljice/ https://shop.bio-una.com/kategorija/med-dzem-poslastice/ https://shop.bio-una.com/kategorija/konditori/ https://shop.bio-una.com/kategorija/kapi-sirupi-i-eliksiri/ https://
-shop.bio-una.com/kategorija/hleb-testenina-brasno-mekinje-i-griz/ https://shop.bio-una.com/kategorija/grickalice/ https://shop.bio-una.com/kategorija/dodaci-ishrani/)
-NEXT:  https://shop.bio-una.com/kategorija/zitarice/page/2/
-NEXT:  nil
-(https://shop.bio-una.com/kategorija/zdravi-napici/ https://shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/ https://shop.bio-una.com/kategorija/vegeterijanski-program/ https://shop.bio-una.com/kategorija/ulje-sirce-soja-sos/ https://shop.bio-una.com/kategorija/zamena-za-secer-i-zasladjivace/ https://shop.bio-una.com/kategorija/rinfuzna-roba/ https://shop.bio-una.com/kategorija/program-za-kolace/ https://shop.bio-una.com/kategorija/prirodni-sokovi/ https://shop.bio-una.com/kategorija/prirodna-kozmetika/ https://shop.bio-una.com/kategorija/pomocna-lekovita-sredstva/ https://shop.bio-una.com/kategorija/ostali-proizvodi/ https://shop.bio-una.com/kategorija/osnovne-namirnice/ https://shop.bio-una.com/kategorija/orasasto-kandirano-voce/ https://shop.bio-una.com/kategorija/musli-i-pahuljice/ https://shop.bio-una.com/kategorija/med-dzem-poslastice/ https://shop.bio-una.com/kategorija/konditori/ https://shop.bio-una.com/kategorija/kapi-sirupi-i-eliksiri/ https://shop.bio-una.com/kategorija/hleb-testenina-bra
-sno-mekinje-i-griz/ https://shop.bio-una.com/kategorija/grickalice/ https://shop.bio-una.com/kategorija/dodaci-ishrani/)
-NEXT:  nil
-(https://shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/ https://shop.bio-una.com/kategorija/vegeterijanski-program/ https://shop.bio-una.com/kategorija/ulje-sirce-soja-sos/ https://shop.bio-una.com/kategorija/zamena-za-secer-i-zasladjivace/ https://shop.bio-una.com/kategorija/rinfuzna-roba/ https://shop.bio-una.com/kategorija/program-za-kolace/ https://shop.bio-una.com/kategorija/prirodni-sokovi/ https://shop.bio-una.com/kategorija/prirodna-kozmetika/ https://shop.bio-una.com/kategorija/pomocna-lekovita-sredstva/ https://shop.bio-una.com/kategorija/ostali-proizvodi/ https://shop.bio-una.com/kategorija/osnovne-namirnice/ https://shop.bio-una.com/kategorija/orasasto-kandirano-voce/ https://shop.bio-una.com/kategorija/musli-i-pahuljice/ https://shop.bio-una.com/kategorija/med-dzem-poslastice/ https://shop.bio-una.com/kategorija/konditori/ https://shop.bio-una.com/kategorija/kapi-sirupi-i-eliksiri/ https://shop.bio-una.com/kategorija/hleb-testenina-brasno-mekinje-i-griz/ https://shop.bio-una.com/katego
-rija/grickalice/ https://shop.bio-una.com/kategorija/dodaci-ishrani/)
-NEXT:  https://shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/page/2/
-NEXT:  https://shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/page/3/
-NEXT:  https://shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/page/4/
-NEXT:  https://shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/page/5/
-NEXT:  https://shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/page/6/
-NEXT:  https://shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/page/7/
-NEXT:  https://shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/https:/shop.bio-una.com/kategorija/zacini-cajevi-zamena-za-kafu/page/8/
-NEXT:  nil
-(https://shop.bio-una.com/kategorija/vegeterijanski-program/ https://shop.bio-una.com/kategorija/ulje-sirce-soja-sos/ https://shop.bio-una.com/kategorija/zamena-za-secer-i-zasladjivace/ https://shop.bio-una.com/kategorija/rinfuzna-roba/ https://shop.bio-una.com/kategorija/program-za-kolace/ https://shop.bio-una.com/kategorija/prirodni-sokovi/ https://shop.bio-una.com/kategorija/prirodna-kozmetika/ https://shop.bio-una.com/kategorija/pomocna-lekovita-sredstva/ https://shop.bio-una.com/kategorija/ostali-proizvodi/ https://shop.bio-una.com/kategorija/osnovne-namirnice/ https://shop.bio-una.com/kategorija/orasasto-kandirano-voce/ https://shop.bio-una.com/kategorija/musli-i-pahuljice/ https://shop.bio-una.com/kategorija/med-dzem-poslastice/ https://shop.bio-una.com/kategorija/konditori/ https://shop.bio-una.com/kategorija/kapi-sirupi-i-eliksiri/ https://shop.bio-una.com/kategorija/hleb-testenina-brasno-mekinje-i-griz/ https://shop.bio-una.com/kategorija/grickalice/ https://shop.bio-una.com/kategorija/dodaci-ishran
-i/)
-NEXT:  https://shop.bio-una.com/kategorija/vegeterijanski-program/page/2/
-NEXT:  https://shop.bio-una.com/kategorija/vegeterijanski-program/https:/shop.bio-una.com/kategorija/vegeterijanski-program/page/3/
-; Evaluation was interrupted
-; Evaluation was interrupted
-clj꞉example1.webscraping.products-scraping꞉> 
-clj꞉example1.webscraping.products-scraping꞉> 
-NEXT:  nil
-(https://shop.bio-una.com/kategorija/ulje-sirce-soja-sos/ https://shop.bio-una.com/kategorija/zamena-za-secer-i-zasladjivace/ https://shop.bio-una.com/kategorija/rinfuzna-roba/ https://shop.bio-una.com/kategorija/program-za-kolace/ https://shop.bio-una.com/kategorija/prirodni-sokovi/ https://shop.bio-una.com/kategorija/prirodna-kozmetika/ https://shop.bio-una.com/kategorija/pomocna-lekovita-sredstva/ https://shop.bio-una.com/kategorija/ostali-proizvodi/ https://shop.bio-una.com/kategorija/osnovne-namirnice/ https://shop.bio-una.com/kategorija/orasasto-kandirano-voce/ https://shop.bio-una.com/kategorija/musli-i-pahuljice/ https://shop.bio-una.com/kategorija/med-dzem-poslastice/ https://shop.bio-una.com/kategorija/konditori/ https://shop.bio-una.com/kategorija/kapi-sirupi-i-eliksiri/ https://shop.bio-una.com/kategorija/hleb-testenina-brasno-mekinje-i-griz/ https://shop.bio-una.com/kategorija/grickalice/ https://shop.bio-una.com/kategorija/dodaci-ishrani/)
-NEXT:  https://shop.bio-una.com/kategorija/ulje-sirce-soja-sos/page/2/
-kk
-; Syntax error compiling at (output.calva-repl:1:7681).
-; Unable to resolve symbol: kk in this context
-clj꞉example1.webscraping.products-scraping꞉> 
-nil
-clj꞉example1.webscraping.products-scraping꞉> 
-nil
-clj꞉example1.webscraping.products-scraping꞉> 
-(nil
- nil
- "https://www.biomarket.rs/prodavnica/etericna-ulja_1"
- "https://www.biomarket.rs/prodavnica/etericna-ulja_2"
- "https://www.biomarket.rs/prodavnica/etericna-ulja_3"
- "https://www.biomarket.rs/prodavnica/etericna-ulja_4"
- "https://www.biomarket.rs/prodavnica/etericna-ulja_1")
-clj꞉example1.webscraping.products-scraping꞉> 
-("https://www.biomarket.rs/prodavnica/etericna-ulja_4"
- "https://www.biomarket.rs/prodavnica/etericna-ulja_1"
- "https://www.biomarket.rs/prodavnica/etericna-ulja_2"
- "https://www.biomarket.rs/prodavnica/etericna-ulja_3"
- "https://www.biomarket.rs/prodavnica/etericna-ulja_4"
- nil
- nil)
-clj꞉example1.webscraping.products-scraping꞉> 
-#'example1.webscraping.products-scraping/stores
-clj꞉example1.webscraping.products-scraping꞉> 
-NEXT:  https://www.biomarket.rs/prodavnica/etericna-ulja_1
-NEXT:  https://www.biomarket.rs/prodavnica/etericna-ulja_2
-NEXT:  https://www.biomarket.rs/prodavnica/etericna-ulja_3
-NEXT:  https://www.biomarket.rs/prodavnica/etericna-ulja_4
-NEXT:  https://www.biomarket.rs/prodavnica/etericna-ulja_5
-NEXT:  nil
-[{:name "ORGANSKO ULJE DIVLJEG ORIGANA 5ML PROBOTANIC", :price "880,00"}
- {:name "ULJE SLATKE NARANDžE, ETERRA, 30ml", :price "640,00"}
- {:name "ULJE SEMENA DIVLJE RUŽE, ETERRA, 50ml", :price "480,00"}
- {:name "ULJE SEMENA MALINE, ETERRA, 50ml", :price "850,00"}
- {:name "ULJE KORE GREJPFRUTA, ETERRA, 50ml", :price "1.060,00"}
- {:name "MORINGA, ULJE, ETERRA, 50ml", :price "850,00"}
- {:name "ULJE TAMJANA, ETERRA, 15ml", :price "850,00"}
- {:name "ULJE PALO SANTO, ETERRA, 10ml", :price "635,00"}
- {:name "ULJE NEROLI, ETERRA, 10ml", :price "955,00"}
- {:name "ULJE YLANG YLANG, ETERRA, 10ml", :price "742,00"}
- {:name "ULJE KAFE, ETERRA, 10ml", :price "850,00"}
- {:name "ULJE CRNOG KUMINA, ETERRA, 250ml", :price "1.485,00"}
- {:name "ULJE GERMANSKA KAMILICA, 5ml, ETERRA", :price "1.485,00"}
- {:name "ULJE RIMSKA KAMILICA, ETERRA, 5ml", :price "2.545,00"}
- {:name "ULJE KARDAMON, ETERRA, 10ml", :price "1.166,00"}
- {:name "ULJE VANILA, ETERRA, 10ml", :price "850,00"}
- {:name "ULJE DIVLJEG ORIGANA, PROBOTANIC 10ml", :price "1.660,00"}
- {:name "BOSILJAK, ULJE, ETERRA, 30ml", :price "660,00"}
- {:name "ULJE DIVLJA NANA - SPERMINT, ETERRA, 30ml", :price "850,00"}
- {:name "ULJE MIRTA, ETERRA, 10ml", :price "850,00"}
- {:name "ULJE CIMETA, ETERRA 30ml", :price "650,00"}
- {:name "ULJE RAVENSARA, ETERRA, 10ml", :price "1.115,00"}
- {:name "ULJE KEDAR, ETERRA 30ml", :price "850,00"}
- {:name "ULJE NIM, ETERRA, 30ml", :price "425,00"}
- {:name "ULJE RUZMARIN, ETERRA 30ml", :price "850,00"}
- {:name "ULJE TIMIJAN, ETERRA, 30ml", :price "850,00"}
- {:name "ULJE ČAJNO DRVO, ETERRA, 30ml", :price "850,00"}
- {:name "ULJE LIMUNSKI EUKALIPTUS, ETERRA, 30ml", :price "640,00"}
- {:name "ULJE LIMUN, ETERRA, 30ml", :price "640,00"}
- {:name "ULJE ČETIRI LOPOVA, ETERRA, 30ml", :price "850,00"}
- {:name "ULJE ŽALFIJA, ETERRA, 15ml", :price "850,00"}
- {:name "ULJE EUKALIPTUS, ETERRA 30ml", :price "640,00"}
- {:name "ULJE DAMIJANA, ETERRA 10ml", :price "900,00"}
- {:name "ULJE TAJLANDSKOG ĐUMBIRA, ETERRA, 15ml", :price "850,00"}
- {:name "ULJE MATIČNJAKA, ETERRA, 10ml", :price "1.160,00"}
- {:name "ULJE CRNI BIBER, ETERRA, 10ml", :price "1.485,00"}
- {:name "ULJE BRAMI (BRAHMI), ETERRA, 10ml", :price "900,00"}
- {:name "ULJE REVITALUM, ETERRA, 10ml", :price "1.115,00"}
- {:name "ULJE LAVANDA, ETERRA 30ml", :price "850,00"}
- {:name "ULJE LIMUN TRAVA, ETERRA 10ml", :price "850,00"}
- {:name "ULJE BERGAMOT, ETERRA, 30ml", :price "850,00"}
- {:name "ULJE RUŽA, ETERRA, 5ml", :price "1.272,00"}
- {:name "ULJE AŠVAGANDA, ETERRA, 10ml", :price "900,00"}
- {:name "ULJE MIRO, ETERRA, 10ml", :price "1.160,00"}
- {:name "ULJE JASMINA, ETERRA 10ml", :price "1.166,00"}
- {:name "ULJE ORIGANA, ETERRA, 20ml", :price "1.660,00"}
- {:name "ULJE KURKUME, ETERRA, 30ml", :price "850,00"}
- {:name "ULJE KAJSIJA, ETERRA 50ml", :price "640,00"}
- {:name "HIMALAJSKE KAPI, ETERRA 50ml", :price "1.166,00"}
- {:name "ULJE KOŠTICA GREJPA, ETERRA 30ml", :price "850,00"}
- ...]
-clj꞉example1.webscraping.products-scraping꞉> 
+clj꞉example1.productsscraping꞉> 
+; Running all project tests…
+; 218 tests finished, all passing 👍, ns: 4, vars: 30
+clj꞉example1.productsscraping꞉> 

@@ -1,14 +1,31 @@
 # Perfumes store price comparator
 
 ## Description
-This application extracts (scrapes) data from various perfumes stores, and then compares their prices.  You can add products to cart, and after adding few perfumes you can see what store is your cheapest option for shopping. 
-Application allows your to search perfumes, add/remove them to cart, increase or reduce their quantity in your cart.
+
+This application extracts (scrapes) data from various perfumes stores, and then compares their prices.  You can add products to cart, and after adding few perfumes to cart you can see what store is your cheapest option for shopping. 
+Application allows you to search perfumes, add/remove them from cart, increase or reduce their quantity in your cart.
+
+### Home page
+
+On this page is short description of project.
+
+### Search
+
+On this page you can search for perfumes by entering perfume's name and/or brend.
+When you click search button, results of the search will be shown.
+On this page you can add products to the cart.
+
+### Cart
+
+When you finish adding products to cart, you can see your cart on this location and total cart sum.
+On this page you can decrease or increase perfume's quantity or remove product from cart.
+ 
 
 ## Structure of project
 
 _SRC folder:_
 - db.clj - File for interaction with SQLite database.
-- formatscrapeddata.clj - In this file are functions for formatting perfumes. When perfumes are scraped from perfume website they usually contain all of perfume info in their name. Functions from this file extract perfumes unit, weight, brand, and other relevant information.
+- formatscrapeddata.clj - This file contains functions for formatting scrapped perfumes. When perfumes are scrapped from the website they usually contain all of the perfume's information in their name. Functions from this file extract perfume's unit, weight, brand, and other relevant information.
 - productsscraping.clj - File for scraping perfume data from website using Reaver.
 
 _Test folder:_ - in this folder are tests for files (db, formatscrapeddata, handler and view).
@@ -23,6 +40,10 @@ _Test folder:_ - in this folder are tests for files (db, formatscrapeddata, hand
 - [Compojure](https://github.com/weavejester/compojure) is used as routing library for Ring.
 
 
+## Model
+
+![Screenshot](resources/public/model.jpg)
+
 ## Prerequisites
 
 You will need [Leiningen][] 2.0.0 or above installed.
@@ -30,13 +51,14 @@ You will need [Leiningen][] 2.0.0 or above installed.
 [leiningen]: https://github.com/technomancy/leiningen
 
 ## Running
-Navigate to example1 project and run lein run.
+
 To start a web server for the application navigate to example1 project and run:
 
     lein ring server
 
-## Scraping data before running server
-Before starting server, if you want to scrape perfume store website you should execute line 101 in file productsscraping.clj. That function creates db, inserts stores to db, scrapes data from defined stores and saves that products to db. If you want to use existing db, which is data scraped on 24.03.2021 just use existing database - database.db.
+### Scraping data before running server
+
+Before starting server, if you want to scrape perfume store website, you should execute line 101 in file productsscraping.clj. That function creates db, inserts stores to db, scrapes data from defined stores and saves the products to db. If you want to use existing db, that is data scraped on 01.04.2021 just use existing database - database.db.
 
 ## License
 Eclipse Public License 2.0
