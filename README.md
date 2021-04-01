@@ -44,6 +44,37 @@ _Test folder:_ - in this folder are tests for files (db, formatscrapeddata, hand
 
 ![Screenshot](resources/public/model.jpg)
 
+## Screenshot
+
+### Home page
+![Screenshot](resources/public/home.jpg)
+
+### Search page
+
+![Screenshot](resources/public/search.jpg)
+
+Search results
+![Screenshot](resources/public/searchres.jpg)
+
+Adding to cart
+![Screenshot](resources/public/added.jpg)
+
+Search after adding product to cart
+![Screenshot](resources/public/searchafter.jpg)
+
+
+### cart
+![Screenshot](resources/public/cart.jpg)
+
+Cart before reducing quantity of the product
+![Screenshot](resources/public/cartbeforered.jpg)
+
+Cart after reducing quantity of the product
+![Screenshot](resources/public/cartafterred.jpg)
+
+Cart after removing product from the cart
+![Screenshot](resources/public/afterremove.jpg)
+
 ## Prerequisites
 
 You will need [Leiningen][] 2.0.0 or above installed.
