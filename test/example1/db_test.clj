@@ -41,7 +41,7 @@
       (is (= r 1))))
   (testing "checking if right values are inserted to table store"
     (let [r (first (find-in-db db_test :store {:id 1}))]
-      (is (= r {:id 1, :name "original_parfemi", :mindelivery nil, :deliverycost nil, :freedelivery nil}))))
+      (is (= r {:id 1, :name "original_parfemi"}))))
   (testing "checking if right values are inserted to table product"
     (let [r (first (find-in-db db_test :product {:id 1}))]
       (is (= r {:id 1 :name "MON PARIS" :weight 10.0 :unit "ml" :brend "burberry" :category "edp" :tester "No"}))))
@@ -63,9 +63,9 @@
   (testing "inserting multiple rows to table STORE, counting number of rows in table"
     (is (= 3 (sql/query db_test ["SELECT * FROM store"] {:result-set-fn count}))))
   (testing "are all added values correctly inserted to table STORE"
-    (is (= (first (find-in-db db_test :store {:id 1})) {:id 1 :name "prodaja parfema" :mindelivery nil, :deliverycost nil, :freedelivery nil}))
-    (is (= (first (find-in-db db_test :store {:id 2})) {:id 2 :name "online prodaja" :mindelivery nil, :deliverycost nil, :freedelivery nil}))
-    (is (= (first (find-in-db db_test :store {:id 3})) {:id 3 :name "parfemi online" :mindelivery nil, :deliverycost nil, :freedelivery nil})))
+    (is (= (first (find-in-db db_test :store {:id 1})) {:id 1 :name "prodaja parfema"}))
+    (is (= (first (find-in-db db_test :store {:id 2})) {:id 2 :name "online prodaja"}))
+    (is (= (first (find-in-db db_test :store {:id 3})) {:id 3 :name "parfemi online"})))
   (testing "inserting multiple rows to table PRODUCT, generated indexes"
     (let [r (insert-all db_test :product [{:name "MON PARIS" :weight 10.0 :unit "ml" :brend "burberry" :category "edp" :tester "No"}
                                           {:name "LONDON" :weight 100.0 :unit "ml" :brend "kiko" :category "edp" :tester "No"}
