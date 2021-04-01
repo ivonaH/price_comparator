@@ -44,7 +44,7 @@ _Test folder:_ - in this folder are tests for files (db, formatscrapeddata, hand
 
 ![Screenshot](resources/public/model.jpg)
 
-## Screenshot
+## Screenshots
 
 ### Home page
 ![Screenshot](resources/public/home.jpg)
@@ -53,26 +53,26 @@ _Test folder:_ - in this folder are tests for files (db, formatscrapeddata, hand
 
 ![Screenshot](resources/public/search.jpg)
 
-Search results
+### Search results
 ![Screenshot](resources/public/searchres.jpg)
 
-Adding to cart
+### Adding to cart
 ![Screenshot](resources/public/added.jpg)
 
 Search after adding product to cart
 ![Screenshot](resources/public/searchafter.jpg)
 
 
-### cart
+### Cart
 ![Screenshot](resources/public/cart.jpg)
 
-Cart before reducing quantity of the product
+### Cart before reducing quantity of the product
 ![Screenshot](resources/public/cartbeforered.jpg)
 
-Cart after reducing quantity of the product
+### Cart after reducing quantity of the product
 ![Screenshot](resources/public/cartafterred.jpg)
 
-Cart after removing product from the cart
+### Cart after removing product with id 96 from the cart
 ![Screenshot](resources/public/afterremove.jpg)
 
 ## Prerequisites
