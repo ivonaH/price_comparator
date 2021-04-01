@@ -34,10 +34,10 @@ _Test folder:_ - in this folder are tests for files (db, formatscrapeddata, hand
 
 - [Hiccup](https://github.com/weavejester/hiccup) library is used for representing HTML in Clojure.
 - [Reaver](https://github.com/mischov/reaver) library is used for for extracting data out of HTML page.
-- [java.jdbc](https://github.com/clojure/java.jdbc) - Clojure wrapper for JDBC-based access to databases.
-- [sqlite-jdbc](https://github.com/xerial/sqlite-jdbc) - library for accessing and creating SQLite database files in Java.
-- [Ring](https://github.com/ring-clojure/ring) is web application library, that is used for abstracting the details of HTTP into API;
-- [Compojure](https://github.com/weavejester/compojure) is used as routing library for Ring.
+- [java.jdbc](https://github.com/clojure/java.jdbc) Clojure wrapper for JDBC-based access to databases.
+- [sqlite-jdbc](https://github.com/xerial/sqlite-jdbc) library for accessing and creating SQLite database files in Java.
+- [Ring](https://github.com/ring-clojure/ring) web application library, that is used for abstracting the details of HTTP into API;
+- [Compojure](https://github.com/weavejester/compojure) used as routing library for Ring.
 
 
 ## Model
@@ -59,9 +59,8 @@ _Test folder:_ - in this folder are tests for files (db, formatscrapeddata, hand
 ### Adding to cart
 ![Screenshot](resources/public/added.jpg)
 
-Search after adding product to cart
+### Search after adding product to cart
 ![Screenshot](resources/public/searchafter.jpg)
-
 
 ### Cart
 ![Screenshot](resources/public/cart.jpg)
